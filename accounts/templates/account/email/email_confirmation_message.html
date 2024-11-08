@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation de votre addresse mail</title>
+</head>
+<body>
+
+<p> Bonjour {{ user.get_full_name| default:user.email}} </p>
+<p> Merci de vous être inscrit sur notre {{ current_site.name }}. Nous sommes ravis de vous compter parmi nous. </p>
+
+<p>Pour activer votre compte veuillez confirmer votre addresse mail en cliquant sur le lien suivant </p>
+
+
+  <p>
+
+    <a href="{{ activate_url }}">Confirmer mon address email</a>
+
+  </p>
+   <p> si cela ne fonctionne pas, copiez le et coller le dans votre navigateur </p>
+
+          <p>{{ activate_url }}</p>
+
+<p>coordialement l'equipe de {{ current_site.name }}</p>
+
+</body>
+</html>
